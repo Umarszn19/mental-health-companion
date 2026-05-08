@@ -25,12 +25,6 @@ Core goals:
 - `frontend/vite-project/` - React app (chat, dashboard, insights, settings)
 - `backend/` - FastAPI service (`/health`, `/analyse`, reply policy, HF integration)
 
-## Code submission (zip)
-
-Before submitting a zip, remove `node_modules/` and `backend/.venv/` and follow
-[CODE_SUBMISSION.md](CODE_SUBMISSION.md) so the archive stays small and restores with
-`npm install` and `pip install -r backend/requirements.txt`.
-
 ## Quick Start
 
 ### 1) Backend
