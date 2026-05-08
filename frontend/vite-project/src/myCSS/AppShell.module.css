@@ -1,0 +1,147 @@
+.shell {
+  --bg: #eff5f7;
+  --surface: #ffffff;
+  --surface-border: #dbe8ee;
+  --text: #163127;
+  --muted: #547265;
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: 'Inter', 'Trebuchet MS', sans-serif;
+}
+
+:global(:root[data-theme='dark']) .shell {
+  color-scheme: dark;
+}
+
+:global(:root[data-theme='dark']) .shell {
+  --bg: #102019;
+  --surface: #173227;
+  --surface-border: #2a5141;
+  --text: #e8f7ef;
+  --muted: #afccbf;
+}
+
+.sidebar {
+  width: 245px;
+  background: linear-gradient(180deg, #14402d 0%, #1e6b4a 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 26px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: #f4fff9;
+}
+
+.brandSub {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: rgba(227, 247, 237, 0.76);
+}
+
+.nav {
+  margin-top: 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.navItem {
+  text-decoration: none;
+  color: rgba(237, 251, 244, 0.94);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.navItemActive {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.logoutBtn {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: #effff7;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.main {
+  flex: 1;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topbar {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 6px 14px rgba(26, 60, 84, 0.06);
+}
+
+.pageTitle {
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.pageSubtitle {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.userPill {
+  display: grid;
+  border: 1px solid var(--surface-border);
+  background: color-mix(in srgb, var(--surface) 88%, #d8edf7 12%);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.userName {
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 14px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

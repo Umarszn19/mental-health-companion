@@ -1,0 +1,30 @@
+# --- JavaScript / Vite (submission: delete node_modules before zip) ---
+node_modules/
+frontend/**/node_modules/
+dist/
+dist-ssr/
+*.local
+
+# --- Python / FastAPI (submission: delete .venv before zip) ---
+.venv/
+venv/
+env/
+**/venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# --- Secrets (never submit real tokens) ---
+.env
+backend/.env
+
+# --- OS / IDE ---
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
